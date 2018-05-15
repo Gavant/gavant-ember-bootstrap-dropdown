@@ -1,4 +1,7 @@
 @import "gavant-ember-bootstrap-dropdown/variables";
+@import "node_modules/animate.css/source/zooming_entrances/zoomIn";
+@import "node_modules/animate.css/source/zooming_exits/zoomOut";
+@import "ember-basic-dropdown";
 
 .dropdown-menu {
     display: block;
@@ -16,7 +19,6 @@
 
 button.dropdown-item {
     cursor: pointer;
-    border-radius: 0;
 }
 
 .ember-basic-dropdown-content {

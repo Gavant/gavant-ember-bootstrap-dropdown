@@ -64,6 +64,23 @@
     </div>
     <div class="row mt-5">
         <div class="col-12">
+            {{#dropdown-menu renderInPlace=true as |dd|}}
+                {{#dd.trigger class="btn btn-outline-warning"}}
+                    Rendered In Place
+                {{/dd.trigger}}
+                {{#dd.content}}
+                    {{#dropdown-action action=(action "test") dd=dd}}
+                        Dropdown Action
+                    {{/dropdown-action}}
+                    {{#dropdown-link "test" dd=dd}}
+                        Dropdown Link
+                    {{/dropdown-link}}
+                {{/dd.content}}
+            {{/dropdown-menu}}
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
             {{#dropdown-menu as |dd|}}
                 {{#dd.trigger class="border p-2" tagName="div"}}
                     div trigger
