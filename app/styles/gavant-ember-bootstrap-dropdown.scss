@@ -9,7 +9,7 @@
 .dropdown-item {
     &.disabled,
     &:disabled {
-        opacity: 0.5;
+        opacity: $bs-dropdown-item-disabled-opacity;
         cursor: not-allowed;
     }
 }
@@ -22,7 +22,7 @@ button.dropdown-item {
 .ember-basic-dropdown-content {
     &--below {
         &.ember-basic-dropdown--transitioning-in {
-            animation: zoomIn $bs-dropdown-animation-duration;
+            animation: $bs-dropdown-transition-in-animation $bs-dropdown-animation-duration;
             &.ember-basic-dropdown-content--right { transform-origin: right 0px; }
             &.ember-basic-dropdown-content--left { transform-origin: left 0px; }
             &.ember-basic-dropdown-content--center { transform-origin: center 0px; }
@@ -31,7 +31,7 @@ button.dropdown-item {
         }
 
         &.ember-basic-dropdown--transitioning-out {
-            animation: zoomOut $bs-dropdown-animation-duration;
+            animation: $bs-dropdown-transition-out-animation $bs-dropdown-animation-duration;
             &.ember-basic-dropdown-content--right { transform-origin: right 0px; }
             &.ember-basic-dropdown-content--left { transform-origin: left 0px; }
             &.ember-basic-dropdown-content--center { transform-origin: center 0px; }
@@ -42,7 +42,7 @@ button.dropdown-item {
 
     &--above {
         &.ember-basic-dropdown--transitioning-in {
-            animation: zoomIn $bs-dropdown-animation-duration;
+            animation: $bs-dropdown-transition-in-animation $bs-dropdown-animation-duration;
             &.ember-basic-dropdown-content--right { transform-origin: right bottom; }
             &.ember-basic-dropdown-content--left { transform-origin: left bottom; }
             &.ember-basic-dropdown-content--center { transform-origin: center bottom; }
@@ -51,7 +51,7 @@ button.dropdown-item {
         }
 
         &.ember-basic-dropdown--transitioning-out {
-            animation: zoomOut $bs-dropdown-animation-duration;
+            animation: $bs-dropdown-transition-out-animation $bs-dropdown-animation-duration;
             &.ember-basic-dropdown-content--right { transform-origin: right bottom; }
             &.ember-basic-dropdown-content--left { transform-origin: left bottom; }
             &.ember-basic-dropdown-content--center { transform-origin: center bottom; }

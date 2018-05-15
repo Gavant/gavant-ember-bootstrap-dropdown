@@ -1,7 +1,7 @@
 <div class="container py-4">
-    <div class="row">
+    <h2>gavant-ember-bootstrap-dropdown</h2>
+    <div class="row mt-5">
         <div class="col-12">
-            <h2>gavant-ember-bootstrap-dropdown</h2>
             {{#dropdown-menu as |dd|}}
                 {{#dd.trigger class="btn btn-primary"}}
                     Default Alignment
@@ -21,10 +21,10 @@
                     Right Aligned
                 {{/dd.trigger}}
                 {{#dd.content}}
-                    {{#dropdown-action action=(action "test") dd=dd}}
+                    {{#dropdown-action action=(action "test") dd=dd disabled=true}}
                         Dropdown Action
                     {{/dropdown-action}}
-                    {{#dropdown-link "test" dd=dd}}
+                    {{#dropdown-link "test" dd=dd disabled=true}}
                         Dropdown Link
                     {{/dropdown-link}}
                 {{/dd.content}}

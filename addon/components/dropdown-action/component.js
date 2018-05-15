@@ -6,7 +6,7 @@ import { tryInvoke } from '@ember/utils';
 export default Component.extend({
     tagName: 'button',
     classNames: ['dropdown-item', 'dropdown-link'],
-    attributeBindings: ['type'],
+    attributeBindings: ['type', 'disabled'],
     type: 'button',
     bubbles: true,
 
