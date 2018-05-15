@@ -1,3 +1,78 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h2>gavant-ember-bootstrap-dropdown</h2>
+            {{#dropdown-menu as |dd|}}
+                {{#dd.trigger class="btn btn-primary"}}
+                    Default Alignment
+                {{/dd.trigger}}
+                {{#dd.content}}
+                    {{#dropdown-action action=(action "test") dd=dd}}
+                        Dropdown Action
+                    {{/dropdown-action}}
+                    {{#dropdown-link "test" dd=dd}}
+                        Dropdown Link
+                    {{/dropdown-link}}
+                {{/dd.content}}
+            {{/dropdown-menu}}
 
+            {{#dropdown-menu horizontalPosition="right" as |dd|}}
+                {{#dd.trigger class="btn btn-secondary"}}
+                    Right Aligned
+                {{/dd.trigger}}
+                {{#dd.content}}
+                    {{#dropdown-action action=(action "test") dd=dd}}
+                        Dropdown Action
+                    {{/dropdown-action}}
+                    {{#dropdown-link "test" dd=dd}}
+                        Dropdown Link
+                    {{/dropdown-link}}
+                {{/dd.content}}
+            {{/dropdown-menu}}
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            {{#dropdown-menu verticalPosition="above" as |dd|}}
+                {{#dd.trigger class="btn btn-outline-danger"}}
+                    Top Aligned
+                {{/dd.trigger}}
+                {{#dd.content}}
+                    {{#dropdown-action action=(action "test") dd=dd}}
+                        Dropdown Action
+                    {{/dropdown-action}}
+                    {{#dropdown-link "test" dd=dd}}
+                        Dropdown Link
+                    {{/dropdown-link}}
+                {{/dd.content}}
+            {{/dropdown-menu}}
+
+            {{#dropdown-menu verticalPosition="above" horizontalPosition="right" as |dd|}}
+                {{#dd.trigger class="btn btn-outline-success"}}
+                    Top Right Aligned
+                {{/dd.trigger}}
+                {{#dd.content}}
+                    {{#dropdown-action action=(action "test") dd=dd}}
+                        Dropdown Action
+                    {{/dropdown-action}}
+                    {{#dropdown-link "test" dd=dd}}
+                        Dropdown Link
+                    {{/dropdown-link}}
+                {{/dd.content}}
+            {{/dropdown-menu}}
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            {{#dropdown-menu as |dd|}}
+                {{#dd.trigger class="border p-2" tagName="div"}}
+                    div trigger
+                {{/dd.trigger}}
+                {{#dd.content class="border p-3 bg-dark text-white"}}
+                    Some custom content. Maybe a nice dropdown form could live here?
+                {{/dd.content}}
+            {{/dropdown-menu}}
+        </div>
+    </div>
+</div>
 {{outlet}}

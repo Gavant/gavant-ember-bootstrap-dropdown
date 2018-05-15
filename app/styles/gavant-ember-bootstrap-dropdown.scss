@@ -1,0 +1,62 @@
+@import "gavant-ember-bootstrap-dropdown/variables";
+
+.dropdown-menu {
+    display: block;
+    left: auto;
+    right: auto;
+}
+
+.dropdown-item {
+    &.disabled,
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+button.dropdown-item {
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.ember-basic-dropdown-content {
+    &--below {
+        &.ember-basic-dropdown--transitioning-in {
+            animation: zoomIn $bs-dropdown-animation-duration;
+            &.ember-basic-dropdown-content--right { transform-origin: right 0px; }
+            &.ember-basic-dropdown-content--left { transform-origin: left 0px; }
+            &.ember-basic-dropdown-content--center { transform-origin: center 0px; }
+            &.ember-basic-dropdown-content--in-place { transform-origin: left 0px; }
+            &.ember-basic-dropdown-content--in-place.ember-basic-dropdown-content--right { transform-origin: right 0px; }
+        }
+
+        &.ember-basic-dropdown--transitioning-out {
+            animation: zoomOut $bs-dropdown-animation-duration;
+            &.ember-basic-dropdown-content--right { transform-origin: right 0px; }
+            &.ember-basic-dropdown-content--left { transform-origin: left 0px; }
+            &.ember-basic-dropdown-content--center { transform-origin: center 0px; }
+            &.ember-basic-dropdown-content--in-place { transform-origin: left 0px; }
+            &.ember-basic-dropdown-content--in-place.ember-basic-dropdown-content--right { transform-origin: right 0px; }
+        }
+    }
+
+    &--above {
+        &.ember-basic-dropdown--transitioning-in {
+            animation: zoomIn $bs-dropdown-animation-duration;
+            &.ember-basic-dropdown-content--right { transform-origin: right bottom; }
+            &.ember-basic-dropdown-content--left { transform-origin: left bottom; }
+            &.ember-basic-dropdown-content--center { transform-origin: center bottom; }
+            &.ember-basic-dropdown-content--in-place { transform-origin: left bottom; }
+            &.ember-basic-dropdown-content--in-place.ember-basic-dropdown-content--right { transform-origin: right bottom; }
+        }
+
+        &.ember-basic-dropdown--transitioning-out {
+            animation: zoomOut $bs-dropdown-animation-duration;
+            &.ember-basic-dropdown-content--right { transform-origin: right bottom; }
+            &.ember-basic-dropdown-content--left { transform-origin: left bottom; }
+            &.ember-basic-dropdown-content--center { transform-origin: center bottom; }
+            &.ember-basic-dropdown-content--in-place { transform-origin: left bottom; }
+            &.ember-basic-dropdown-content--in-place.ember-basic-dropdown-content--right { transform-origin: right bottom; }
+        }
+    }
+}

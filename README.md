@@ -1,7 +1,7 @@
 gavant-ember-bootstrap-dropdown
 ==============================================================================
 
-Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4
+Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4.
 
 Installation
 ------------------------------------------------------------------------------
@@ -9,19 +9,40 @@ Installation
 ```
 ember install gavant-ember-bootstrap-dropdown
 ```
+([ember-basic-dropdown](https://github.com/cibernox/ember-basic-dropdown) will be installed along with the addon)
 
 Usage
 ------------------------------------------------------------------------------
 
-[TODO]
+#### Styles
+
+This addon assumes that the project already has [Bootstrap 4](https://github.com/twbs/bootstrap#quick-start) installed, as by default, it applies CSS classes
+that are compatible with bootstrap's components. However, these classes can be customized if needed.
 
 To use the addon styles, you must use SASS:
 ```
 ember install ember-cli-sass
 ```
 
-(Upon addon installation, an import statement will be added to your `app.scss`)
+Upon addon installation, imports statement will be added to your `app.scss`:
 
+```scss
+@import "ember-basic-dropdown";
+@import "node_modules/animate.css/source/zooming_entrances/zoomIn";
+@import "node_modules/animate.css/source/zooming_exits/zoomOut";
+@import "gavant-ember-bootstrap-dropdown";
+```
+
+### Components
+
+#### `{{dropdown-menu}}`
+[TODO]
+
+#### `{{dropdown-link}}`
+[TODO]
+
+#### `{{dropdown-action}}`
+[TODO]
 
 Contributing
 ------------------------------------------------------------------------------
