@@ -1,17 +1,16 @@
 {
   "name": "gavant-ember-bootstrap-dropdown",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4.",
+  "repository": "https://github.com/Gavant/gavant-ember-bootstrap-dropdown",
   "keywords": [
     "ember-addon"
   ],
-  "license": "MIT",
-  "author": "",
+  "author": "Gavant Software, Inc.",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app blueprints config lib server test-support tests",

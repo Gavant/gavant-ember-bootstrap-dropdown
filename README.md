@@ -1,7 +1,7 @@
 gavant-ember-bootstrap-dropdown
 ==============================================================================
 
-[Short description of the addon.]
+Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4
 
 Installation
 ------------------------------------------------------------------------------
@@ -10,11 +10,17 @@ Installation
 ember install gavant-ember-bootstrap-dropdown
 ```
 
-
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+[TODO]
+
+To use the addon styles, you must use SASS:
+```
+ember install ember-cli-sass
+```
+
+(Upon addon installation, an import statement will be added to your `app.scss`)
 
 
 Contributing
