@@ -8,7 +8,7 @@ export default Component.extend({
     classNames: ['dropdown-action'],
     classNameBindings: ['itemClass'],
     attributeBindings: ['type', 'disabled'],
-    itemClass: 'dropdown-link',
+    itemClass: 'dropdown-item',
     type: 'button',
     bubbles: true,
 

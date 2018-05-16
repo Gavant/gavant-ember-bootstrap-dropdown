@@ -9,9 +9,13 @@ module.exports = {
     normalizeEntityName() {},
 
     afterInstall() {
-        let importStatement = '\n@import "gavant-ember-bootstrap-dropdown"\n';
+        let importStatement =
+            '\n@import "ember-basic-dropdown";\n' +
+            '@import "gavant-ember-bootstrap-dropdown";\n';
+
         let stylePath = path.join('app', 'styles');
         let file = path.join(stylePath, 'app.scss');
+        let writeOp = Promise.resolve();
 
         if(!fs.existsSync(stylePath)) {
             fs.mkdirSync(stylePath);
@@ -19,10 +23,19 @@ module.exports = {
 
         if(fs.existsSync(file)) {
             this.ui.writeLine(`Added import statement to ${file}`);
-            return this.insertIntoFile(file, importStatement, {});
+            writeOp = this.insertIntoFile(file, importStatement, {});
         } else {
             fs.writeFileSync(file, importStatement);
             this.ui.writeLine(`Created ${file}`);
         }
+
+        return writeOp
+            .then(() => {
+                return this.addAddonsToProject({
+                    packages: [
+                        {name: 'ember-basic-dropdown', target: '~1.0.0'}
+                    ]
+                });
+            });
     }
 };

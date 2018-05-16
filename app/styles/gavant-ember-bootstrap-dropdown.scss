@@ -1,7 +1,5 @@
 @import "gavant-ember-bootstrap-dropdown/variables";
-@import "node_modules/animate.css/source/zooming_entrances/zoomIn";
-@import "node_modules/animate.css/source/zooming_exits/zoomOut";
-@import "ember-basic-dropdown";
+@import "gavant-ember-bootstrap-dropdown/animations";
 
 .dropdown-menu {
     display: block;

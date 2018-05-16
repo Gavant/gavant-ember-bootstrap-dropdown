@@ -9,7 +9,7 @@ Installation
 ```
 ember install gavant-ember-bootstrap-dropdown
 ```
-([ember-basic-dropdown](https://github.com/cibernox/ember-basic-dropdown) will be installed along with the addon)
+**IMPORTANT:** [ember-basic-dropdown](https://github.com/cibernox/ember-basic-dropdown) will be installed along with the addon, and added to your app's package.json. However, if your app already has ember-basic-dropdown as a dependency via another addon, such as ember-power-select, this should be removed from your package.json via `yarn remove ember-basic-dropdown`.
 
 Usage
 ------------------------------------------------------------------------------
@@ -28,7 +28,9 @@ Upon addon installation, an `@import` statement will be added to your `app.scss`
 
 ```scss
 @import "ember-basic-dropdown";
+@import "gavant-ember-bootstrap-dropdown";
 ```
+**IMPORTANT:** If your app already has ember-basic-dropdown as a dependency via another addon, such as ember-power-select, the `@import "ember-basic-dropdown";` line should be removed.
 
 ### Components
 
