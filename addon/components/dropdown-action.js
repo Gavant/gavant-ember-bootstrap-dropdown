@@ -13,11 +13,15 @@ export default Component.extend({
     bubbles: true,
 
     click() {
-        this._super(...arguments);
         const ddActions = get(this, 'dd.actions');
+
+        this._super(...arguments);
         tryInvoke(this, 'action', [event]);
+
         if(ddActions) {
             scheduleOnce('afterRender', ddActions, 'close');
         }
+
+        return get(this, 'bubbles');
     }
 });

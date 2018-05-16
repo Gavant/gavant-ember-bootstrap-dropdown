@@ -8,8 +8,10 @@ export default LinkComponent.extend({
     itemClass: 'dropdown-item',
 
     click() {
-        this._super(...arguments);
         const ddActions = get(this, 'dd.actions');
+
+        this._super(...arguments);
+
         if(ddActions) {
             scheduleOnce('afterRender', ddActions, 'close');
         }
