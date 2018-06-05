@@ -19,7 +19,7 @@ button.dropdown-item {
     cursor: pointer;
 }
 
-.ember-basic-dropdown-content {
+.dropdown-menu.ember-basic-dropdown-content {
     &--below {
         &.ember-basic-dropdown--transitioning-in {
             animation: $bs-dropdown-transition-in-animation $bs-dropdown-animation-duration;
