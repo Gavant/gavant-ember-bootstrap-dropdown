@@ -1,5 +1,5 @@
 {
-  "name": "gavant-ember-bootstrap-dropdown",
+  "name": "@gavant/ember-bootstrap-dropdown",
   "version": "0.0.2",
   "description": "Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4.",
   "repository": "https://github.com/Gavant/gavant-ember-bootstrap-dropdown",
