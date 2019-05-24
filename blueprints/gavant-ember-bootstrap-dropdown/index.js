@@ -11,7 +11,7 @@ module.exports = {
     afterInstall() {
         let importStatement =
             '\n@import "ember-basic-dropdown";\n' +
-            '@import "gavant-ember-bootstrap-dropdown";\n';
+            '@import "@gavant/ember-bootstrap-dropdown";\n';
 
         let stylePath = path.join('app', 'styles');
         let file = path.join(stylePath, 'app.scss');
