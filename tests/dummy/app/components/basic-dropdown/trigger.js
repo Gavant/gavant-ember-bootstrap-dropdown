@@ -1,1 +1,1 @@
-export { default } from 'gavant-ember-bootstrap-dropdown/components/basic-dropdown/trigger';
+export { default } from '@gavant/ember-bootstrap-dropdown/components/basic-dropdown/trigger';
