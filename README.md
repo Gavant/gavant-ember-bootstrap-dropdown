@@ -28,7 +28,7 @@ Upon addon installation, an `@import` statement will be added to your `app.scss`
 
 ```scss
 @import "ember-basic-dropdown";
-@import "@gavant/ember-bootstrap-dropdown";
+@import "gavant-ember-bootstrap-dropdown";
 ```
 **IMPORTANT:** If your app already has ember-basic-dropdown as a dependency via another addon, such as ember-power-select, the `@import "ember-basic-dropdown";` line should be removed.
 
