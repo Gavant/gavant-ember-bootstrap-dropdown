@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 
 export default class ApplicationController extends Controller {
     @action
-    test(event) {
+    test(event: Event) {
         //eslint-disable-next-line no-console
         event.preventDefault();
         console.log('action fired!');

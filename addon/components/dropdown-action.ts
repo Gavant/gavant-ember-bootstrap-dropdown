@@ -3,15 +3,15 @@ import { scheduleOnce } from '@ember/runloop';
 import { tryInvoke } from '@ember/utils';
 
 export default class DropdownActionComponent extends Component {
-    tagName = 'button';
-    classNames = ['dropdown-action'];
-    classNameBindings = ['itemClass'];
-    attributeBindings = ['type', 'disabled'];
-    itemClass = 'dropdown-item';
-    type = 'button';
-    bubbles = true;
+    tagName: string = 'button';
+    classNameBindings: string[] = ['itemClass'];
+    attributeBindings: string[] = ['type', 'disabled'];
+    itemClass: string = 'dropdown-item';
+    type: string = 'button';
+    bubbles: boolean = true;
 
     click() {
+        //@ts-ignore
         const ddActions = this.dd.actions;
         tryInvoke(this, 'action', [event]);
 
