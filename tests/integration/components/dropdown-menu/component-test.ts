@@ -2,6 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import 'qunit-dom';
 
 module('Integration | Component | dropdown-menu', function(hooks) {
   setupRenderingTest(hooks);
@@ -10,17 +11,17 @@ module('Integration | Component | dropdown-menu', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{dropdown-menu}}`);
+    await render(hbs`<DropdownMenu></DropdownMenu>`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom(this.element).hasText('');
 
     // Template block usage:
     await render(hbs`
-      {{#dropdown-menu}}
-        template block text
-      {{/dropdown-menu}}
+        <DropdownMenu>
+            template block text
+        </DropdownMenu>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });

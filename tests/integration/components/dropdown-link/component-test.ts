@@ -2,6 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import 'qunit-dom';
 
 module('Integration | Component | dropdown-link', function(hooks) {
   setupRenderingTest(hooks);
@@ -10,17 +11,17 @@ module('Integration | Component | dropdown-link', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{dropdown-link "Foobar" "test"}}`);
+    await render(hbs`<DropdownLink @text="Foobar" @route="test"></DropdownLink>`);
 
-    assert.equal(this.element.textContent.trim(), 'Foobar');
+    assert.dom(this.element).hasText('Foobar');
 
     // Template block usage:
     await render(hbs`
-      {{#dropdown-link "test"}}
-        template block text
-      {{/dropdown-link}}
+        <DropdownLink @route="test">
+            template block text
+        </DropdownLink>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element).hasText('template block text');
   });
 });
