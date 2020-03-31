@@ -1,5 +1,5 @@
 import BasicDropdownContent from 'ember-basic-dropdown/components/basic-dropdown/content';
 
-export default BasicDropdownContent.extend({
-    class: 'dropdown-menu'
-});
+export default class BasicDropdownContentComponent extends BasicDropdownContent {
+    class = 'dropdown-menu';
+}

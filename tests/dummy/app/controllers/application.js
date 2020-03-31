@@ -1,10 +1,11 @@
 import Controller from '@ember/controller';
+import { action } from '@ember/object';
 
-export default Controller.extend({
-    actions: {
-        test() {
-            //eslint-disable-next-line no-console
-            console.log('action fired!');
-        }
+export default class ApplicationController extends Controller {
+    @action
+    test(event) {
+        //eslint-disable-next-line no-console
+        event.preventDefault();
+        console.log('action fired!');
     }
-});
+}
