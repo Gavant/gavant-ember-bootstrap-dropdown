@@ -2,92 +2,92 @@
     <h2>@gavant/ember-bootstrap-dropdown</h2>
     <div class="row mt-5">
         <div class="col-12">
-            <DropdownMenu as |DD|>
-                <DD.trigger @class="btn btn-primary">
+            <DropdownMenu @renderInPlace={{true}} as |DD|>
+                <DD.Trigger @htmlTag="button" class="btn btn-primary">
                     Default Alignment
-                </DD.trigger>
-                <DD.content @class="dropdown-menu">
-                    <DropdownAction @class="dropdown-action" @action={{this.test}} @dd={{DD}}>
+                </DD.Trigger>
+                <DD.Content class="dropdown-menu">
+                    <DropdownAction class="dropdown-action" @action={{this.test}} @dd={{DD}}>
                         Dropdown Action
                     </DropdownAction>
-                    <DropdownLink @class="dropdown-link" @route="test" @dd={{DD}}>
+                    <DropdownLink class="dropdown-link" @route="test" @dd={{DD}}>
                         Dropdown Link
                     </DropdownLink>
-                </DD.content>
+                </DD.Content>
             </DropdownMenu>
 
             <DropdownMenu @horizontalPosition="right" as |DD|>
-                <DD.trigger @class="btn btn-secondary">
+                <DD.Trigger  @htmlTag="button" class="btn btn-secondary">
                     Right Aligned
-                </DD.trigger>
-                <DD.content @class="dropdown-menu">
-                    <DropdownAction @class="dropdown-action" @action={{this.test}} @dd={{DD}} disabled={{true}}>
+                </DD.Trigger>
+                <DD.Content class="dropdown-menu">
+                    <DropdownAction class="dropdown-action" @action={{this.test}} @dd={{DD}} disabled={{true}}>
                         Dropdown Action
                     </DropdownAction>
-                    <DropdownLink @class="dropdown-link" @route="test" @dd={{DD}}>
+                    <DropdownLink class="dropdown-link" @route="test" @dd={{DD}}>
                         Dropdown Link
                     </DropdownLink>
-                </DD.content>
+                </DD.Content>
             </DropdownMenu>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col-12">
             <DropdownMenu @verticalPosition="above" as |DD|>
-                <DD.trigger @class="btn btn-outline-danger">
+                <DD.Trigger  @htmlTag="button" class="btn btn-outline-danger">
                     Top Aligned
-                </DD.trigger>
-                <DD.content @class="dropdown-menu">
-                    <DropdownAction @class="dropdown-action" @action={{this.test}} @dd={{DD}}>
+                </DD.Trigger>
+                <DD.Content class="dropdown-menu">
+                    <DropdownAction class="dropdown-action" @action={{this.test}} @dd={{DD}}>
                         Dropdown Action
                     </DropdownAction>
-                    <DropdownLink @class="dropdown-link" @route="test" @dd={{DD}}>
+                    <DropdownLink class="dropdown-link" @route="test" @dd={{DD}}>
                         Dropdown Link
                     </DropdownLink>
-                </DD.content>
+                </DD.Content>
             </DropdownMenu>
 
             <DropdownMenu @verticalPosition="above" @horizontalPosition="right" as |DD|>
-                <DD.trigger @class="btn btn-outline-success">
+                <DD.Trigger  @htmlTag="button" class="btn btn-outline-success">
                     Top Right Aligned
-                </DD.trigger>
-                <DD.content @class="dropdown-menu">
-                    <DropdownAction @class="dropdown-action" @action={{this.test}} @dd={{DD}}>
+                </DD.Trigger>
+                <DD.Content class="dropdown-menu">
+                    <DropdownAction class="dropdown-action" @action={{this.test}} @dd={{DD}}>
                         Dropdown Action
                     </DropdownAction>
-                    <DropdownLink @class="dropdown-link" @route="test" @dd={{DD}}>
+                    <DropdownLink class="dropdown-link" @route="test" @dd={{DD}}>
                         Dropdown Link
                     </DropdownLink>
-                </DD.content>
+                </DD.Content>
             </DropdownMenu>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col-12">
             <DropdownMenu @renderInPlace={{true}} as |DD|>
-                <DD.trigger @class="btn btn-outline-warning">
+                <DD.Trigger  @htmlTag="button" class="btn btn-outline-warning">
                     Rendered In Place
-                </DD.trigger>
-                <DD.content @class="dropdown-menu">
-                    <DropdownAction @class="dropdown-action" @action={{this.test}} @dd={{DD}}>
+                </DD.Trigger>
+                <DD.Content class="dropdown-menu">
+                    <DropdownAction class="dropdown-action" @action={{this.test}} @dd={{DD}}>
                         Dropdown Action
                     </DropdownAction>
-                    <DropdownLink @class="dropdown-link" @route="test" @dd={{DD}}>
+                    <DropdownLink class="dropdown-link" @route="test" @dd={{DD}}>
                         Dropdown Link
                     </DropdownLink>
-                </DD.content>
+                </DD.Content>
             </DropdownMenu>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col-12">
             <DropdownMenu as |DD|>
-                <DD.trigger @class="border p-2" @tagName="div">
+                <DD.Trigger class="border p-2">
                     div trigger
-                </DD.trigger>
-                <DD.content @class="border p-3 bg-dark text-white dropdown-menu">
+                </DD.Trigger>
+                <DD.Content class="border p-3 bg-dark text-white dropdown-menu">
                     Some custom content. Maybe a nice dropdown form could live here?
-                </DD.content>
+                </DD.Content>
             </DropdownMenu>
         </div>
     </div>

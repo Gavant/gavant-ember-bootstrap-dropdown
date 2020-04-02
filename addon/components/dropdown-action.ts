@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { scheduleOnce } from '@ember/runloop';
 import { tryInvoke } from '@ember/utils';
 
+//TODO needs to be converted to a Glimmer component
 export default class DropdownActionComponent extends Component {
     tagName: string = 'button';
     classNameBindings: string[] = ['itemClass'];
