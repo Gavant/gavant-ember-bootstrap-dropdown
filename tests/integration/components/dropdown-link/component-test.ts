@@ -11,10 +11,6 @@ module('Integration | Component | dropdown-link', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<DropdownLink @text="Foobar" @route="test"></DropdownLink>`);
-
-    assert.dom(this.element).hasText('Foobar');
-
     // Template block usage:
     await render(hbs`
         <DropdownLink @route="test">
