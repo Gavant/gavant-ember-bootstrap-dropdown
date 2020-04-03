@@ -1,12 +1,22 @@
-import LinkComponent from '@ember/routing/link-component';
+import Component from '@glimmer/component';
 import { scheduleOnce } from '@ember/runloop';
+import { action } from '@ember/object';
 
-export default class DropdownLinkComponent extends LinkComponent {
-    click() {
-        //@ts-ignore
-        const ddActions = this.dd.actions;
-        if(ddActions) {
-            scheduleOnce('afterRender', ddActions, 'close');
+export interface DropdownLinkArgs {
+    dd: {
+        actions: {
+            close: () => void;
         }
+    }
+}
+
+export default class DropdownLinkComponent extends Component<DropdownLinkArgs> {
+    /**
+     * Handles anchor tag onclick events
+     * @memberof DropdownLinkComponent
+     */
+    @action
+    onClick() {
+        scheduleOnce('afterRender', this.args.dd.actions, 'close');
     }
 }

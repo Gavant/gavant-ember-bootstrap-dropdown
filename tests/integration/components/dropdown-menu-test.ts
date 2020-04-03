@@ -4,7 +4,7 @@ import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import 'qunit-dom';
 
-module('Integration | Component | dropdown-link', function(hooks) {
+module('Integration | Component | dropdown-menu', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
@@ -13,9 +13,9 @@ module('Integration | Component | dropdown-link', function(hooks) {
 
     // Template block usage:
     await render(hbs`
-        <DropdownLink @route="test">
+        <DropdownMenu>
             template block text
-        </DropdownLink>
+        </DropdownMenu>
     `);
 
     assert.dom(this.element).hasText('template block text');

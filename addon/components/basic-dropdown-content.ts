@@ -1,4 +1,3 @@
-//@ts-ignore TODO: not sure why TS cannot find this module, method is there, needs investigating
 import { setComponentTemplate } from '@ember/component';
 //@ts-ignore see: https://github.com/cibernox/ember-basic-dropdown/issues/542
 import BasicDropdownContent from 'ember-basic-dropdown/components/basic-dropdown-content';

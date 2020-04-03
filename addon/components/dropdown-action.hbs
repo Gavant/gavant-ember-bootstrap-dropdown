@@ -1,0 +1,9 @@
+<button
+    class="dropdown-action dropdown-item"
+    type="button"
+    {{on "click" this.onClick}}
+    disabled={{this.disabled}}
+    ...attributes
+>
+    {{yield}}
+</button>

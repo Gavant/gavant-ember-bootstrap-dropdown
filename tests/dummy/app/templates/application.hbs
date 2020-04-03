@@ -7,10 +7,10 @@
                     Default Alignment
                 </dd.Trigger>
                 <dd.Content class="dropdown-menu">
-                    <DropdownAction @dd={{dd}}>
-                        <button type="button" {{on "click" this.test}} class="dropdown-action dropdown-item">Dropdown Action</button>
+                    <DropdownAction @action={{this.test}} @dd={{dd}}>
+                        Dropdown Action
                     </DropdownAction>
-                    <DropdownLink class="dropdown-link dropdown-item" @route="test" @dd={{dd}}>
+                    <DropdownLink @route="test" @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
@@ -21,10 +21,10 @@
                     Right Aligned
                 </dd.Trigger>
                 <dd.Content class="dropdown-menu">
-                    <DropdownAction class="dropdown-action" @dd={{dd}}>
-                        <button type="button" {{on "click" this.test}} class="dropdown-action dropdown-item" disabled={{true}}>Dropdown Action</button>
+                    <DropdownAction @disabled={{true}} @dd={{dd}}>
+                        Dropdown Action
                     </DropdownAction>
-                    <DropdownLink class="dropdown-link dropdown-item" @route="test" @dd={{dd}}>
+                    <DropdownLink @route="test" @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
@@ -38,10 +38,10 @@
                     Top Aligned
                 </dd.Trigger>
                 <dd.Content class="dropdown-menu">
-                    <DropdownAction class="dropdown-action" @dd={{dd}}>
-                        <button type="button" {{on "click" this.test}} class="dropdown-action dropdown-item">Dropdown Action</button>
+                    <DropdownAction @action={{this.test}} @dd={{dd}}>
+                        Dropdown Action
                     </DropdownAction>
-                    <DropdownLink class="dropdown-link dropdown-item" @route="test" @dd={{dd}}>
+                    <DropdownLink @route="test" @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
@@ -52,10 +52,10 @@
                     Top Right Aligned
                 </dd.Trigger>
                 <dd.Content class="dropdown-menu">
-                    <DropdownAction class="dropdown-action" @dd={{dd}}>
-                        <button type="button" {{on "click" this.test}} class="dropdown-action dropdown-item">Dropdown Action</button>
+                    <DropdownAction @action={{this.test}} @dd={{dd}}>
+                        Dropdown Action
                     </DropdownAction>
-                    <DropdownLink class="dropdown-link dropdown-item" @route="test" @dd={{dd}}>
+                    <DropdownLink @route="test" @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
@@ -69,10 +69,10 @@
                     Rendered In Place
                 </dd.Trigger>
                 <dd.Content class="dropdown-menu">
-                    <DropdownAction class="dropdown-action" @dd={{dd}}>
-                        <button type="button" {{on "click" this.test}} class="dropdown-action dropdown-item">Dropdown Action</button>
+                    <DropdownAction @action={{this.test}} @dd={{dd}}>
+                        Dropdown Action
                     </DropdownAction>
-                    <DropdownLink class="dropdown-link dropdown-item" @route="test" @dd={{dd}}>
+                    <DropdownLink @route="test" @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
