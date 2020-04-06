@@ -1,0 +1,13 @@
+<LinkTo
+    @route={{@route}}
+    @models={{this.models}}
+    @activeClass={{this.activeClass}}
+    @query={{@query}}
+    @replace={{@replace}}
+    @current-when={{@currentWhen}}
+    class="dropdown-link dropdown-item"
+    {{on "click" this.onClick}}
+    ...attributes
+>
+    {{yield}}
+</LinkTo>

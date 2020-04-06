@@ -3,6 +3,15 @@ gavant-ember-bootstrap-dropdown
 
 Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4.
 
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
+
+
 Installation
 ------------------------------------------------------------------------------
 
@@ -37,59 +46,40 @@ Upon addon installation, an `@import` statement will be added to your `app.scss`
 This addon is simply an extension of ember-basic-dropdown, so you can use the exact same [API](https://ember-basic-dropdown.com/docs/api-reference), with a couple additional components:
 
 ```hbs
-{{#dropdown-menu as |dd|}}
-    {{#dd.trigger class="btn btn-primary"}}Trigger{{/dd.trigger}}
-    {{#dd.content}}
-        {{#dropdown-action dd=dd action=(action "myAction")}}
+<DropdownMenu as |DD|>
+    <DD.trigger @class="btn btn-primary">
+        Trigger
+    </DD.trigger>
+    <DD.content>
+        <DropdownAction @dd={{DD} @action={{this.myAction}}>
             Dropdown Action
-        {{/dropdown-action}}
-        {{#dropdown-link "some.route" dd=dd}}
+        </DropdownAction>
+        <DropdownLink @route="some.route" @dd={{DD}}>
             Dropdown Link
-        {{/dropdown-link}}
-    {{/dd.content}}
-{{/dropdown-menu}}
+        </DropdownLink>
+    </DD.content>
+</DropdownMenu>
 ```
 
-#### `{{dropdown-menu}}`
+#### `<DropdownMenu>`
 
-Just an alias of `{{basic-dropdown}}`, it maintains the exact same API. It may be extended with additional behaviors/functionality in the future, so its preferred to use this component for all dropdown menus.
+Just an alias of `<BasicDropdown>`, it maintains the exact same API. It may be extended with additional behaviors/functionality in the future, so its preferred to use this component for all dropdown menus.
 
-#### `{{dropdown-link}}`
+#### `<DropdownLink>`
 
-Extends `Ember.LinkComponent`, so provides the same API as `{{link-to}}`. It adds additional classes to style it correctly in a bootstrap dropdown, and its `dd` attribute MUST be passed the `{{#dropdown-menu as |dd|}}`'s yielded `dd` object (e.g. `{{#dropdown-link "route" dd=dd}}Foo{{/dropdown-link}}`), in order for the dropdown to close when clicked.
+Extends `Ember.LinkComponent`, so provides the same API as `<LinkTo>`. It adds additional classes to style it correctly in a bootstrap dropdown, and its `DD` attribute MUST be passed the `<DropdownMenu as |DD|>`'s yielded `DD` object (e.g. `<DropdownLink @route="route" @dd={{DD}}>Foo</DropdownLink>`), in order for the dropdown to close when clicked.
 
-#### `{{dropdown-action}}`
+#### `<DropdownAction>`
 
-A button element that adds additional classes to style it correctly in a bootstrap dropdown. Link `dropdown-link`, its `dd` attribute MUST be passed the `{{#dropdown-menu as |dd|}}`'s yielded `dd` object (e.g. `{{#dropdown-link "route" dd=dd}}Foo{{/dropdown-link}}`), in order for the dropdown to close when clicked.
+A button element that adds additional classes to style it correctly in a bootstrap dropdown. Link `dropdown-link`, its `DD` attribute MUST be passed the `<DropdownMenu as |DD|>`'s yielded `DD` object (e.g. `<DropdownLink @route="route" @dd={{DD}}>Foo</DropdownLink>`), in order for the dropdown to close when clicked.
 
-Additionally, the component may be passed an action via its `action` attribute, which will be invoked on click, and the click event object will be sent up as an action param. You may also prevent action bubbling by passing in `bubbles=false`.
+Additionally, the component may be passed an action via its `@action` attribute, which will be invoked on click, and the click event object will be sent up as an action param. You may also prevent action bubbling by passing in `@bubbles={{false}}`.
 
 Contributing
 ------------------------------------------------------------------------------
 
-### Installation
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
-* `git clone <repository-url>`
-* `cd gavant-ember-bootstrap-dropdown`
-* `npm install`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Running tests
-
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
-
-### Running the dummy application
-
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 License
 ------------------------------------------------------------------------------
