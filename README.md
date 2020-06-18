@@ -50,7 +50,7 @@ This addon is simply an extension of ember-basic-dropdown, so you can use the ex
     <DD.Trigger @class="btn btn-primary">
         Trigger
     </DD.Trigger>
-    <DD.Content>
+    <DD.Content class="dropdown-menu">
         <DropdownAction @dd={{DD} @action={{this.myAction}}>
             Dropdown Action
         </DropdownAction>
