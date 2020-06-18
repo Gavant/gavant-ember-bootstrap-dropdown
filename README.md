@@ -47,17 +47,17 @@ This addon is simply an extension of ember-basic-dropdown, so you can use the ex
 
 ```hbs
 <DropdownMenu as |DD|>
-    <DD.trigger @class="btn btn-primary">
+    <DD.Trigger @class="btn btn-primary">
         Trigger
-    </DD.trigger>
-    <DD.content>
+    </DD.Trigger>
+    <DD.Content>
         <DropdownAction @dd={{DD} @action={{this.myAction}}>
             Dropdown Action
         </DropdownAction>
         <DropdownLink @route="some.route" @dd={{DD}}>
             Dropdown Link
         </DropdownLink>
-    </DD.content>
+    </DD.Content>
 </DropdownMenu>
 ```
 
