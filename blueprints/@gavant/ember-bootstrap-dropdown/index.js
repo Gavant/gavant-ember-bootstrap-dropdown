@@ -33,7 +33,7 @@ module.exports = {
             .then(() => {
                 return this.addAddonsToProject({
                     packages: [
-                        {name: 'ember-basic-dropdown', target: '~1.0.0'}
+                        {name: 'ember-basic-dropdown', target: '^3.0.6'}
                     ]
                 });
             });
