@@ -1,9 +1,10 @@
-import Component from '@glimmer/component';
-import { scheduleOnce } from '@ember/runloop';
 import { action } from '@ember/object';
+import { scheduleOnce } from '@ember/runloop';
+import Component from '@glimmer/component';
 
 export interface DropdownLinkArgs {
     route: string;
+    model?: any;
     models?: any[];
     query?: object;
     replace?: boolean;

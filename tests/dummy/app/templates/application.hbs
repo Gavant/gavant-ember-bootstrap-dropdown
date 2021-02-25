@@ -1,5 +1,7 @@
 <div class="container py-4">
-    <h2>@gavant/ember-bootstrap-dropdown</h2>
+    <h2>
+        @gavant/ember-bootstrap-dropdown
+    </h2>
     <div class="row mt-5">
         <div class="col-12">
             <DropdownMenu as |dd|>
@@ -11,6 +13,16 @@
                         Dropdown Action
                     </DropdownAction>
                     <DropdownLink @route="test" @dd={{dd}}>
+                        Dropdown Link
+                    </DropdownLink>
+                    <DropdownLink @route="test.two" @model="wow" @dd={{dd}}>
+                        Dropdown Link
+                    </DropdownLink>
+                    <DropdownLink
+                        @route="test.two.three"
+                        @models={{this.ids}}
+                        @dd={{dd}}
+                    >
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
@@ -47,7 +59,10 @@
                 </dd.Content>
             </DropdownMenu>
 
-            <DropdownMenu @verticalPosition="above" @horizontalPosition="right" as |dd|>
+            <DropdownMenu
+                @verticalPosition="above"
+                @horizontalPosition="right" as |dd|
+            >
                 <dd.Trigger @htmlTag="button" class="btn btn-outline-success">
                     Top Right Aligned
                 </dd.Trigger>
