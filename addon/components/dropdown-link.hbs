@@ -1,29 +1,13 @@
-{{#if @model}}
-    <LinkTo
-        @route={{@route}}
-        @model={{@model}}
-        @activeClass={{this.activeClass}}
-        @query={{@query}}
-        @replace={{@replace}}
-        @current-when={{@currentWhen}}
-        class="dropdown-link dropdown-item"
-        ...attributes
-        {{on "click" this.onClick}}
-    >
-        {{yield}}
-    </LinkTo>
-{{else}}
-    <LinkTo
-        @route={{@route}}
-        @models={{this.models}}
-        @activeClass={{this.activeClass}}
-        @query={{@query}}
-        @replace={{@replace}}
-        @current-when={{@currentWhen}}
-        class="dropdown-link dropdown-item"
-        ...attributes
-        {{on "click" this.onClick}}
-    >
-        {{yield}}
-    </LinkTo>
-{{/if}}
+<LinkTo
+    @route={{@route}}
+    @models={{if @model (array @model) this.models}}
+    @activeClass={{this.activeClass}}
+    @query={{@query}}
+    @replace={{@replace}}
+    @current-when={{@currentWhen}}
+    class="dropdown-link dropdown-item"
+    ...attributes
+    {{on "click" this.onClick}}
+>
+    {{yield}}
+</LinkTo>
