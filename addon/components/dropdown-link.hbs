@@ -5,9 +5,9 @@
     @query={{@query}}
     @replace={{@replace}}
     @current-when={{@currentWhen}}
+    @invokeAction={{this.onClick}}
     class="dropdown-link dropdown-item"
     ...attributes
-    {{on "click" this.onClick}}
 >
     {{yield}}
 </LinkTo>
