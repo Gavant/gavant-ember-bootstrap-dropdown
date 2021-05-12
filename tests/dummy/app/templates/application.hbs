@@ -18,11 +18,7 @@
                     <DropdownLink @route="test.two" @model="wow" @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
-                    <DropdownLink
-                        @route="test.two.three"
-                        @models={{this.ids}}
-                        @dd={{dd}}
-                    >
+                    <DropdownLink @route="test.two.three" @models={{this.ids}} @dd={{dd}}>
                         Dropdown Link
                     </DropdownLink>
                 </dd.Content>
@@ -59,10 +55,7 @@
                 </dd.Content>
             </DropdownMenu>
 
-            <DropdownMenu
-                @verticalPosition="above"
-                @horizontalPosition="right" as |dd|
-            >
+            <DropdownMenu @verticalPosition="above" @horizontalPosition="right" as |dd|>
                 <dd.Trigger @htmlTag="button" class="btn btn-outline-success">
                     Top Right Aligned
                 </dd.Trigger>
