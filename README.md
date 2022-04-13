@@ -4,15 +4,9 @@ Dropdown menus built on ember-basic-dropdown, and styled by Bootstrap 4.
 
 ## Compatibility
 
--   Ember.js v3.16 or above
--   Ember CLI v2.13 or above
--   Node.js v10 or above
-
-```
-ember install @gavant/ember-bootstrap-dropdown
-```
-
-**IMPORTANT:** [ember-basic-dropdown](https://github.com/cibernox/ember-basic-dropdown) will be installed along with the addon, and added to your app's package.json. However, if your app already has ember-basic-dropdown as a dependency via another addon, such as ember-power-select, this should be removed from your package.json via `yarn remove ember-basic-dropdown`.
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
 
 ## Usage
 
