@@ -2,11 +2,11 @@
     @route={{@route}}
     @models={{if @model (array @model) this.models}}
     @activeClass={{this.activeClass}}
-    @query={{@query}}
+    @query={{if @query @query (hash)}}
     @replace={{@replace}}
     @current-when={{@currentWhen}}
-    @invokeAction={{this.onClick}}
     class="dropdown-link dropdown-item"
+    {{on "click" this.onClick}}
     ...attributes
 >
     {{yield}}

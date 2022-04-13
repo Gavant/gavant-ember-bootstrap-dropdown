@@ -13,8 +13,8 @@ export interface DropdownLinkArgs {
     dd: {
         actions: {
             close: () => void;
-        }
-    }
+        };
+    };
 }
 
 export default class DropdownLinkComponent extends Component<DropdownLinkArgs> {
