@@ -1,23 +1,26 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+
+import { setupRenderingTest } from 'ember-qunit';
+
 import 'qunit-dom';
 
-module('Integration | Component | dropdown-menu', function(hooks) {
-  setupRenderingTest(hooks);
+import hbs from 'htmlbars-inline-precompile';
+import { module, test } from 'qunit';
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+module('Integration | Component | dropdown-menu', function (hooks) {
+    setupRenderingTest(hooks);
 
-    // Template block usage:
-    await render(hbs`
+    test('it renders', async function (assert) {
+        // Set any properties with this.set('myProperty', 'value');
+        // Handle any actions with this.set('myAction', function(val) { ... });
+
+        // Template block usage:
+        await render(hbs`
         <DropdownMenu>
             template block text
         </DropdownMenu>
     `);
 
-    assert.dom(this.element).hasText('template block text');
-  });
+        assert.dom(this.element as Element).hasText('template block text');
+    });
 });
