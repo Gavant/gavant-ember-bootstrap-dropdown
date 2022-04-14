@@ -29,7 +29,7 @@ module.exports = {
 
         return writeOp.then(() => {
             return this.addAddonsToProject({
-                packages: [{ name: 'ember-basic-dropdown', target: '^3.0.6' }]
+                packages: [{ name: 'ember-basic-dropdown', target: '^5.0.0' }]
             });
         });
     }
