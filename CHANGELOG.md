@@ -1,3 +1,12 @@
+
+## v3.0.0 (2022-07-22)
+
+#### :boom: Breaking Change
+* [#35](https://github.com/Gavant/gavant-ember-bootstrap-dropdown/pull/35) Converting to v2 addon ([@bakerac4](https://github.com/bakerac4))
+
+#### Committers: 1
+- Adam Baker ([@bakerac4](https://github.com/bakerac4))
+
 #### [v2.0.0](https://github.com/Gavant/gavant-ember-bootstrap-dropdown/compare/v1.1.0...v2.0.0)
 
 -   Upgrade to 4.0 [`#32`](https://github.com/Gavant/gavant-ember-bootstrap-dropdown/pull/32)
