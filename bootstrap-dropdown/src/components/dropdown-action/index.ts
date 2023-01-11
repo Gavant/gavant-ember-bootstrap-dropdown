@@ -1,6 +1,6 @@
-import Component from '@glimmer/component';
-import { scheduleOnce } from '@ember/runloop';
 import { action } from '@ember/object';
+import { scheduleOnce } from '@ember/runloop';
+import Component from '@glimmer/component';
 
 export interface DropdownActionArgs {
     action?: (event: Event) => void;
@@ -11,7 +11,15 @@ export interface DropdownActionArgs {
     };
 }
 
-export default class DropdownActionComponent extends Component<DropdownActionArgs> {
+interface DropdownActionSignature {
+    Args: DropdownActionArgs;
+    Blocks: {
+        default: [];
+    };
+    Element: HTMLButtonElement;
+}
+
+export default class DropdownActionComponent extends Component<DropdownActionSignature> {
     /**
      * Handles action button click events
      * @param {Event} event
