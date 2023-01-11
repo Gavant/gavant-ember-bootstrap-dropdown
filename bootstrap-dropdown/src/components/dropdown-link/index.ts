@@ -17,7 +17,15 @@ export interface DropdownLinkArgs {
     };
 }
 
-export default class DropdownLinkComponent extends Component<DropdownLinkArgs> {
+interface DropdownLinkSignature {
+    Args: DropdownLinkArgs;
+    Blocks: {
+        default: [];
+    };
+    Element: HTMLAnchorElement;
+}
+
+export default class DropdownLinkComponent extends Component<DropdownLinkSignature> {
     /**
      * ember's <LinkTo> complains if you pass it a @models arg value that is not an array
      * but we dont want to require passing in that arg if the route needs no models so

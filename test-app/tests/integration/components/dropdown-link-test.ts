@@ -21,6 +21,6 @@ module('Integration | Component | dropdown-link', function (hooks) {
             </DropdownLink>
         `);
 
-        assert.dom(this.element as Element).hasText('template block text');
+        assert.dom().hasText('template block text');
     });
 });

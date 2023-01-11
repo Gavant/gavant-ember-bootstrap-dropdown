@@ -44,10 +44,9 @@
     "@babel/preset-typescript": "^7.17.12",
     "@babel/runtime": "^7.16.7",
     "@embroider/addon-dev": "^1.7.1",
-    "@glint/core": "^0.9.1",
-    "@glint/environment-ember-loose": "^0.9.1",
+    "@glint/core": "^0.9.7",
+    "@glint/environment-ember-loose": "^0.9.7",
     "@rollup/plugin-babel": "^5.3.1",
-    "@types/ember-qunit": "^5.0.0",
     "@types/ember-resolver": "^5.0.11",
     "@types/ember__application": "^4.0.0",
     "@types/ember__array": "^4.0.1",
@@ -64,7 +63,6 @@
     "@types/ember__string": "^3.0.9",
     "@types/ember__template": "^4.0.0",
     "@types/ember__test": "^4.0.0",
-    "@types/ember__test-helpers": "^2.6.1",
     "@types/ember__utils": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
@@ -88,6 +86,18 @@
     "*": {
       "*": [
         "dist/*"
+      ],
+      "components/dropdown-action": [
+        "dist/components/dropdown-action/index.d.ts"
+      ],
+      "components/dropdown-link": [
+        "dist/components/dropdown-link/index.d.ts"
+      ],
+      "components/dropdown-menu": [
+        "dist/components/dropdown-menu/index.d.ts"
+      ],
+      "glint": [
+        "dist/glint.d.ts"
       ]
     }
   },
