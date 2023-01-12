@@ -24,12 +24,9 @@
         "inlineSourceMap": true,
         "inlineSources": true,
         "module": "es6",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
     },
-    "include": [
-        "src/**/*",
-        "types/**/*"
-, "blueprints"    ],
+    "include": ["src/**/*","types/**/*", "blueprints", "../node_modules/@gavant/glint-template-types/**/*"],
     "exclude": [
         "dist/**/*"
     ]
