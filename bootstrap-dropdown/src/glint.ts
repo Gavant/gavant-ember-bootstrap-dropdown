@@ -3,8 +3,8 @@
 import BasicDropdown from 'ember-basic-dropdown/components/basic-dropdown';
 
 // See https://typed-ember.gitbook.io/glint/using-glint/ember/authoring-addons
-import DropdownAction from 'components/dropdown-action';
-import DropdownLink from 'components/dropdown-link';
+import DropdownAction from './components/dropdown-action';
+import DropdownLink from './components/dropdown-link';
 
 declare module '@glint/environment-ember-loose/registry' {
     export default interface Registry {

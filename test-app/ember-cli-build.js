@@ -9,10 +9,14 @@ module.exports = function (defaults) {
             watchDependencies: Object.keys(packageJson.dependencies)
         },
         sassOptions: {
-            includePaths: ['../node_modules/@gavant/ember-bootstrap-dropdown/dist/styles']
+            includePaths: [
+                '../node_modules/ember-basic-dropdown',
+                '../node_modules/@gavant/ember-bootstrap-dropdown/dist/styles'
+            ]
         }
     });
 
-    const { Webpack } = require('@embroider/webpack');
-    return require('@embroider/compat').compatBuild(app, Webpack);
+    // const { Webpack } = require('@embroider/webpack');
+    // return require('@embroider/compat').compatBuild(app, Webpack);
+    return app.toTree();
 };

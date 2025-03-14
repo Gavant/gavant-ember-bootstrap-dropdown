@@ -4,7 +4,8 @@
         "composite": true,
 
          // Path resolution
-        "baseUrl": "./src",
+        // "baseUrl": "./src",
+        "typeRoots": ["./node_modules/@types", "./src/types"],
         "moduleResolution": "node",
 
         "target": "es2020",
@@ -24,9 +25,10 @@
         "inlineSourceMap": true,
         "inlineSources": true,
         "module": "es6",
-        "experimentalDecorators": true,
+        "experimentalDecorators": true
     },
-    "include": ["src/**/*","types/**/*", "blueprints", "../node_modules/@gavant/glint-template-types/**/*"],
+    // "include": ["src/components/dropdown-action/index.ts", "src/types/*.d.ts"],
+    "include": ["src/**/*", "./types/**/*"],
     "exclude": [
         "dist/**/*"
     ]
